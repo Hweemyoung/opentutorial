@@ -15,22 +15,97 @@
         </ol>
         <h2>CODING</h2>
         <p title="Paragraph" draggable="false" accesskey="1">
-            <h5>Paragraph</h5>
+            <h3>Paragraph</h3>
             <br>tag 'p'
             <br>Attributes: 'align'/global attributes/event attributes
         </p>
         <p>
-            <h5>Image</h5>
+            <h3>Image</h3>
             <br>tag 'img'
             <br>Attributes: 'alt'/'title'
             <br><img src="./data/img/forest-4605204_640.jpg" width="200px" height="auto" title="forest" alt="forest">
         </p>
         <p>
-            <h5>Motion pictures</h5><br>tag 'iframe'
+            <h3>Table</h3>
+            <br>tag: table(>thead/tbody/tfoot)tr(th)>td
+            <br>Attributes: global/event
+            <br>Note: No attributes to 'table' supported in HTML5.
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Name</th><th>Gender</th><th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HMK</td><td>M</td><td>Tokyo</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td><td>Region</td>
+                    </tr>
+                </tfoot>
+            </table>
+        <p>
+            <h3>Form</h3>
+            <br>Tag: form
+            <br>Attributes: action
+            <form action="http://localhost/login.php">
+                <br><h3>Input</h3>
+                <br>Tag: input
+                <br>Attributes: type/name/value/rows/cols/...
+                <ul>
+                    <li><h4>type="text"</h4></li>
+                    <br>ID <input type="text" name="id" value="default value">
+                    <li><h4>type="password"</h4></li>
+                    <br>PW<input type="password" name="pw">
+                    <li><h4>type="textarea"</h4></li>
+                    <br><textarea cols="50" rows="2" name="textarea">defalut text</textarea>
+                    <li><h4>type="radio"</h4></li>
+                    <br>Note: Can choose one among multiple input type "radio" under the same name.
+                    <br>
+                    T:<input type="radio" name="radio" value="T">
+                    F:<input type="radio" name="radio" value="F">
+                    <br>
+                    P:<input type="radio" name="radio2" value="P">
+                    N:<input type="radio" name="radio2" value="N">
+                    <li><h4>type="checkbox"</h4></li>
+                    <br>Note: Can choose <strong>multiple</strong> items among multiple input type "checkbox" under the same name.
+                    <br>
+                    1:<input type="checkbox" name="chbx" value="1">
+                    2:<input type="checkbox" name="chbx" value="2">
+                    3:<input type="checkbox" name="chbx" value="3">
+                    <li><h4>type="submit"</h4></li>
+                    <br><input type="submit" value="SUBMIT">
+                    <li><h4>type="button"</h4></li>
+                    <br><input type="button" value="BUTTON" onclick="alert('Hello World!')">
+                    <li><h4>type="reset"</h4></li>
+                    <br><input type="reset" value="RESET">
+                </ul>
+                <br><h3>Select</h3>
+                <br>Tag: select
+                <br>Attributes: name/id/multiple
+                <br>Note: Dropdown
+                <select name="color1" id="">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <br>Press Ctrl and select multiple items
+                <select name="color2" id="" multiple>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </form>
+        </p>
+        <p>
+            <h3>Motion pictures</h3><br>tag 'iframe'
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
         <p>
-            <h5>Comments service</h5><br>disqus
+            <h3>Comments service</h3><br>disqus
             <div id="disqus_thread"></div>
             <script>
 
@@ -53,7 +128,7 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                                        
         </p>
         <p>
-            <h5>Anchor</h5><br>tag 'a'<br>attribute 'href' 'title' 'target'
+            <h3>Anchor</h3><br>tag 'a'<br>attribute 'href' 'title' 'target'
             <a href="https://www.naver.com" title="NAVER" target="_blank">NAVER</a>
         </p>
     </body>
