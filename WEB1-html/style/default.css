@@ -1,0 +1,38 @@
+/* Three patterns of selector declaration. */
+
+ul li{
+    color: rgba(0, 0, 0, .5);
+    text-decoration: underline;
+    border: 1px solid #000;
+}
+
+.stress>h3{
+    text-decoration: line-through;
+}
+
+input, h2{
+    color: red;
+}
+
+/* Pseudo class selector */
+
+a:visited{
+    color: grey;
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+a:active{
+    color: green;
+}
+
+input:focus{
+    color: rgba(0, 0, 0, .8);
+}
+
+input:last-child{
+    border: 1px solid #000;
+    padding: 10% 10%;
+}
