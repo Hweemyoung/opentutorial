@@ -1,0 +1,39 @@
+.grid{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+#px{
+    font-size: 16px;
+}
+#rem{
+    font-size: 1rem;
+}
+
+#tomato{
+    color: tomato;
+}
+
+#center{
+    text-align: center;
+}
+
+#justify{
+    text-align: justify;
+}
+
+#arial-serif{
+    font-family: arial, serif;
+}
+
+#verdana-sans-serif{
+    font-family: verdana, sans-serif;
+}
+
+#Helvetica-Neue-monospace{
+    font-family: "Helvetica Neue", monospace;
+}
+
+#font{
+    font: 15px/3 arial, sans-serif;
+}
