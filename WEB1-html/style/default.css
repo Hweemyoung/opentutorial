@@ -41,3 +41,36 @@ input:last-child{
     background-color: #000;
     color: #FFF;
 }
+
+/* Property: display */
+/* Block level element */
+/* Inline element */
+h1, a{
+    border: 1px solid #000;
+}
+
+h1{
+    border: 1px solid #000;
+    display: block;
+    /* width: 500px; */
+}
+
+/* Grid */
+div{
+    border: 3px solid #888;
+}
+
+
+
+#grid{
+    border: 3px solid #800;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+/* Media query */
+@media(min-width:600px){
+    div{
+        display:none
+    }
+}
