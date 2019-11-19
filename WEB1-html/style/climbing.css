@@ -1,0 +1,19 @@
+#grid{
+    display: grid;
+    grid-template-rows: 128px 1fr;
+    border: 1px solid #600;
+}
+
+ol{
+    position: absolute;
+    border: 1px solid #400;
+}
+li{
+    float: left;
+    border: 1px solid #200;
+    width: 100px;
+}
+
+h2{
+    border: 1px solid #800;
+}

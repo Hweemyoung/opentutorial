@@ -3,16 +3,151 @@
     <head>
         <title>WEB1-html</title>
         <meta charset="utf-8">
+        <script src="./js/color.js"></script>
     </head>
-    <link>
+    <link rel="stylesheet" href="./style/diary.css">
+    <script>
+        function toggle_night_day(self){
+            var body = document.querySelector('body');
+            if(self.value === 'night'){
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+                self.value = 'day';
+            } else {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+                self.value = 'night';
+            }
+        }
+    </script>
     <body>
         <h1><a href="./index.html">HMK</a></h1>
-        <ol>
-            <li><a href="./coding.html">coding</a></li>
-            <li><a href="./diary.html">diary</a></li>
-            <li><a href="./cooking.html">cooking</a></li>
-            <li><a href="./climbing.html">climbing</a></li>
-        </ol>
-        <h2>diary</h2>
+        <div id="grid">
+            <div>
+                <ol>
+                    <li><a class="a" href="./coding.html">coding</a></li>
+                    <li><a class="a" href="./diary.html">diary</a></li>
+                    <li><a class="a" href="./cooking.html">cooking</a></li>
+                    <li><a class="a" href="./climbing.html">climbing</a></li>
+                </ol>
+            </div>
+            <div>
+                <h2>DIARY</h2>
+                <p>
+                    Here we explore basic JS.
+                </p>
+                <ul>
+                    <li>
+                        <h3>No script</h3>          
+                    </li>
+                    <p>
+                        <input type="button" value="night" 
+                        onclick="
+                        document.querySelector('body').style.backgroundColor='black';
+                        document.querySelector('body').style.color='white';
+                        ">
+                        <input type="button" value="day" 
+                        onclick="
+                        document.querySelector('body').style.backgroundColor='white';
+                        document.querySelector('body').style.color='black';
+                        ">
+                    </p>
+                    <li>
+                        <h3>Conditional statement </h3>
+                    </li>
+                    <p>
+                        <input id="night_day" type="button" value="night" onclick="
+                        if(document.querySelector('#night_day').value === 'night'){
+                            document.querySelector('body').style.backgroundColor = 'black';
+                            document.querySelector('body').style.color = 'white';
+                            document.querySelector('#night_day').value = 'day'
+                        } else {
+                            document.querySelector('body').style.backgroundColor = 'white';
+                            document.querySelector('body').style.color = 'black';
+                            document.querySelector('#night_day').value = 'night'
+                        }">
+                    </p>
+                    <li>
+                        <h3>Refactoring</h3>
+                    </li>
+                    <p>
+                        'this'
+                        <input type="button" value="night" onclick="
+                        if(this.value === 'night'){
+                            this.value = 'day';
+                            document.querySelector('body').style.backgroundColor = 'black';
+                            document.querySelector('body').style.color = 'white';
+                        } else {
+                            this.value = 'night';
+                            document.querySelector('body').style.backgroundColor = 'white';
+                            document.querySelector('body').style.color = 'black';
+                        }
+                        ">
+                    </p>
+                    <li>
+                        <h3>Array&Iteration</h3>
+                    </li>
+                    <p>
+                        <input type="button" value="change a colors" onclick="
+                        var alist = document.querySelectorAll('a');
+                        var i = 0;
+                        for(i=0;i<alist.length;i++){
+                            alist[i].style.color = 'powderblue';
+                        }
+                        "><br>
+                        Note: cannot VECTORIZE?
+                    </p>
+                    <li>
+                        <h3>Function</h3>
+                    </li>
+                    <p>
+                        <input type="button" value="night" onclick="
+                        toggle_night_day(this);
+                        ">
+                    </p>
+                    <li>
+                        <h3>Object</h3>
+                    </li>
+                    <p>
+                        One way to call attributes of an object is 'object.attribute'.
+                    </p>
+                    <script>
+                        var personnels = {
+                            "manager": "HMK",
+                            "designer": "unidentified"
+                        };
+                        document.write("Manager is " + personnels.manager + "<br>");
+                        document.write("Designer is " + personnels.designer + "<br>");
+                    </script>
+                    <p>
+                        Another way is 'object[attribute]'.
+                    </p>
+                    <script>
+                        personnels["data scientist"] = "sb";
+                        document.write("Data scientist is " + personnels["data scientist"] + "<br>");
+                    </script>
+                    <li>
+                        <h3>Import JSscript</h3>
+                    </li>
+                    <p>
+                        <input type="button" value="night" onclick="
+                            if(this.value === 'night'){
+                                BODY.setBGColor('black');
+                                BODY.setColor('white');
+                                this.value = 'day';
+                            } else {
+                                BODY.setBGColor('white');
+                                BODY.setColor('black');
+                                this.value = 'night';
+                            }
+                        ">
+                    </p>
+                </ul>
+                
+                
+                <br><br>
+                
+            </div>
+        </div>        
     </body>
 </html>
