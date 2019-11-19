@@ -5,6 +5,8 @@
         <meta charset="utf-8">
     </head>
     <link href="./style/default.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/climbing.js"></script>
     <body class="stress">
         <h1><a href="./index.html">HMK</a></h1>
         <ol>
@@ -14,6 +16,21 @@
             <li><a href="./climbing.html">climbing</a></li>
         </ol>
         <h2>CODING</h2>
+        <input type="button" value="night" onclick="
+            if(this.value === 'night'){
+                Body.setColor('white');
+                Body.setBGColor('black');
+                Links.setColor('powderblue');
+                ul_li.setColor('rgba(255, 255, 255, .5)')
+                this.value = 'day';
+            } else {
+                Body.setColor('black');
+                Body.setBGColor('white');
+                Links.setColor('blue');
+                ul_li.setColor('rgba(0, 0, 0, .5)')
+                this.value = 'night';
+            };
+            ">
         <p title="Paragraph" draggable="false" accesskey="1">
             <h3>Paragraph</h3>
             <br>tag 'p'

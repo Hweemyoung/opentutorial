@@ -5,6 +5,8 @@
         <meta charset="utf-8">
     </head>
     <link rel="stylesheet" href="./style/climbing.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/climbing.js"></script>
     <body>
         <h1><a href="./index.html">HMK</a></h1>
         <div id="grid">
@@ -18,7 +20,33 @@
             </div>
             <div style="border: 1px solid #200;">
                 <h2>CLIMBING</h2>
-
+                <p>
+                    Here we exploit JS object.
+                </p>
+                <p>
+                    <input type="button" value="night" onclick="
+                        if(this.value === 'night'){
+                            Body.setColor('white');
+                            Body.setBGColor('black');
+                            Links.setColor('powderblue');
+                            this.value = 'day';
+                        } else {
+                            Body.setColor('black');
+                            Body.setBGColor('white');
+                            Links.setColor('blue');
+                            this.value = 'night';
+                        };
+                        ">
+                </p>
+                <p>
+                    Use jQuery Library.
+                </p>
+                
+            </div>
+            <div>
+                <p id="copyright">
+                    Copyright. HMK
+                </p>
             </div>
         </div>
         

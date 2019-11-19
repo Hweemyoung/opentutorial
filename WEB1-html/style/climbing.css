@@ -1,7 +1,11 @@
 #grid{
     display: grid;
-    grid-template-rows: 128px 1fr;
+    grid-template-rows: 128px 1fr 100px;
     border: 1px solid #600;
+}
+
+#copyright{
+    text-align: center;
 }
 
 ol{
