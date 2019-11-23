@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    #parent, #grand, #other{
+        border: 5px solid tomato;
+    }
+    #grand{
+        position: absolute;
+        right: 100px;
+        bottom: 100px;
+    }
+    #parent{
+        position: relative;
+        top: -10px;
+        left: -20px;
+    }
+
+    #me{
+        background-color: black;
+        color: #FFF;
+        position: absolute;
+        /* position:absolute w/o offset means position where the element should have been, but float over the parent. */
+        /* Display still block. */
+        width: 300px;
+        text-align: center;
+        /* position: absolute w/ offset means relative position from 'CLOSEST position: NOT static' parent(origin). */
+        top: 50px;
+        left: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="grand">grand
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+        </div>
+    </div>
+</body>
+</html>
