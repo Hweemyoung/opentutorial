@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        li{
+            color: red;
+        }
+        </style>
+    </head>
+<body>
+<ul>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li class="active">JavaScript</li>
+</ul>
+<ol>
+    <li id="active2">active2</li>
+    <li>no id</li>
+</ol>
+<input type="button" value="powderblue" onclick="
+var actives = document.getElementsByClassName('active');
+for(var i = 0 ; i < actives.length ; i++){
+    actives[i].style.color = 'powderblue';
+};
+">
+<input id="active2Color" type="button" value="blue" onclick="
+var active2 = document.getElementById('active2');
+active2.style.color = this.value;
+">
+<input type="text" value='blue' onkeypress="
+var value = this.value
+document.getElementById('active2Color').value = value;
+">
+<script>
+    var ul = document.getElementsByTagName('ul')[0];
+    var lis = ul.getElementsByTagName('li');
+</script>
+</body>
+</html>

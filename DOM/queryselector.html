@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        li{
+            color: red;
+        }
+        </style>
+    </head>
+<body>
+<ul>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li class="active">JavaScript</li>
+</ul>
+<ol>
+    <li id="active2">active2</li>
+    <li>no id</li>
+</ol>
+<input type="button" value="blue" onclick="
+document.querySelector('#active2').style.color = this.value;
+">
+<input type="button" value="powderblue" onclick="
+var names = document.querySelectorAll('.active');
+for(var name in names){
+    names[name].style.color = this.value;
+};
+">
+</body>
+</html>

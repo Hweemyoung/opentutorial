@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        li{
+            color: red;
+        }
+        </style>
+    </head>
+<body>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<input type="button" value="powderblue" onclick="
+for(var i = 0 ; i < lis.length ; i++){
+    lis[i].style.color = 'powderblue';
+};
+">
+<script>
+    var ul = document.getElementsByTagName('ul')[0];
+    var lis = ul.getElementsByTagName('li');
+</script>
+</body>
+</html>
