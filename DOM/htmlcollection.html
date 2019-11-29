@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8">
+<style></style>
+<script></script>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="active">JS</li>
+        <a href="#" id="anchor">#</a>
+        <input type="button" id="button" value="button">
+    </ul>
+    <script>
+        console.group('before');
+        var lis = document.getElementsByTagName('li');
+        console.log(lis.constructor.name); // HTMLCollection
+        for(var i = 0; i < lis.length; i++){
+            console.log(lis[i]);
+        }
+        console.groupEnd();
+        console.group('after');
+        lis[1].parentNode.removeChild(lis[1]);
+        for(var i = 0; i < lis.length; i++){
+            console.log(lis[i]);
+        }
+        
+    </script>
+</body>
+</html>
