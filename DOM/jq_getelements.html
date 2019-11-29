@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li class="marked">html</li>
+        <li>css</li>
+        <li id="active">
+            JS
+            <ul>
+                <li>JSCore</li>
+                <li class="marked">DOM</li>
+                <li class="marked">BOM</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+    var a = $('.marked', '#active'); // $(selector: Selector[, context: Element or jQuery])
+    a.css('background-color', 'red'); 
+    var b = $('#active .marked');
+    b.css('background-color', 'blue');
+    $('#active').find('.marked').css('background-color', 'green'); // jQuery.find(Selector)
+    </script>
+</body>
+
+</html>
