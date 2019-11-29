@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8">
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <a href="1" id="target">1</a>
+    <a href="2" class="target2">2</a>
+    <a href="3" class="target2">3</a>
+    <script>
+    var t = $('#target');
+    console.log(t.attr('href')); 
+
+    var t2 = $('.target2');
+    console.log(t2.attr('href')); // returns first element
+    t2.attr('href', '5'); // handles all elements
+    console.log(t2.attr('href'));
+
+    t2.prop('class', 'target3');
+    t2.addClass('additionalClass');
+    console.log(t2.prop('className'));
+    </script>
+</body>
+</html>
