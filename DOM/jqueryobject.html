@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="active">JS</li>
+        <a href="#" id="anchor">#</a>
+        <input type="button" id="button" value="button">
+    </ul>
+    <script>
+        var lis = $('li'); // arraylike object
+        lis.css('text-decoration', 'underline');
+        lis[1].style.textDecoration = '';
+        console.log(lis.css('text-decoration')); // returns property of the first element.
+        $(lis[2]).css('text-decoration', '');
+        lis.map(function (index, elem){
+            console.log('Changing color of', index, 'th element: ', elem);
+            console.log("'this' object points element: ", elem);
+            console.log(this === elem);
+            $(elem).css('color', 'red');
+        })
+    </script>
+</body>
+
+</html>
