@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body>
+    <ul>
+        <li class="marked">html</li>
+        <li>css</li>
+        <li id="active">js
+            <ul>
+                <li>js core</li>
+                <li class="marked">DOM</li>
+                <li class="marked">BOM</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var list = document.getElementsByClassName('marked');
+        console.group('document');
+        for(var i=0; i<list.length; i++){
+            console.log(i, 'th element in the list has text:');
+            console.log(list[i].textContent);  // Element.textContent
+        }
+        console.groupEnd();
+        console.group('active');
+        var active = document.getElementById('active');
+        var list = active.getElementsByClassName('marked');  // Element.getElementsByClassName(String)
+        for(var i=0; i<list.length; i++){
+            console.log(i, 'th element in the list has text:');
+            console.log(list[i].textContent);  // Element.textContent
+        }
+        console.groupEnd();
+    </script>
+</body>
+
+</html>

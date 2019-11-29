@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li id="active">js</li>
+    </ul>
+    <script>
+    var active = document.getElementById('active');
+    console.log(active.id); // Element.id
+    console.log('Changing Element.id');
+    active.id = 'deactive';
+    console.log(active.id);
+    
+    console.log(active.className);
+    console.log("Changing Element.className");
+    active.className = "important current";
+    console.log(active.className);
+    console.log('Adding Element.className');
+    active.className += " readed";
+    console.log(active.className);
+    function loop(){
+        for(var i=0; i<active.classList.length; i++){
+            console.log(i, active.classList[i], typeof(active.classList[i]));
+        }
+    }
+    </script>
+    <input type="button" value="DOMTokenList" onclick="console.log(active.classList)">
+    <input type="button" value="조회" onclick="loop();">
+    <input type="button" value="active.classList.add(String)" onclick="active.classList.add('marked');">
+    <input type="button" value="active.classList.remove(String)" onclick="active.classList.remove('important');">
+    <input type="button" value="Element.classList.toggle(String)" onclick="active.classList.toggle('unknown');">
+</body>
+
+</html>
