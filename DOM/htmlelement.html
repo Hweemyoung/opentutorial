@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8">
+<style></style>
+<script></script>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="active">JS</li>
+        <a href="#" id="anchor">#</a>
+        <input type="button" id="button" value="button">
+    </ul>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis.constructor.name); // HTMLCollection
+        var li = document.getElementById('active');
+        console.log(li.constructor.name); // HTMLLIElement
+        var anchor = document.getElementById('anchor');
+        console.log(anchor.constructor.name);
+        var button = document.getElementById('button');
+        console.log(button.constructor.name);
+        li.type = 'square'
+        console.log(anchor.href);
+        anchor.href = '?'
+    </script>
+</body>
+</html>
