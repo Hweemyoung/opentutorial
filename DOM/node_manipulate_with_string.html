@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+        h1{
+            word-wrap: break-word;
+        }
+    </style>
+    <script></script>
+</head>
+
+<body>
+    <ul id="target">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <input type="button" onclick="get_html()" value=".outerHTML"><br>
+    <input type="button" onclick="set_html()" value="set to .innerHTML"><br>
+    <input type="button" onclick="get_text()" value=".outerText"><br>
+    <input type="button" onclick="set_text()" value="set to .innerText"><br>
+    <input type="text" style="width: 300px" value="value" id="btn_set"><br>
+    <hr>
+    <h1>HTMLElement.insertAdjacentHTML</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi omnis labore ad assumenda aut inventore aspernatur ipsum, obcaecati reprehenderit, velit illum saepe id voluptates ipsa non? Ratione aperiam sint maiores!</p>
+    <input type="button" onclick="beforebegin()" value="beforebegin">
+    <input type="button" onclick="afterbegin()" value="afterbegin">
+    <input type="button" onclick="beforeend()" value="beforeend">
+    <input type="button" onclick="afterend()" value="afterend">
+    <script>
+    var target = document.getElementById('target');
+    function get_html(){
+        alert(target.outerHTML);
+    }
+    function set_html(){
+        target.innerHTML = document.getElementById('btn_set').value
+    }
+    function get_text(){
+        alert(target.outerText);
+    }
+    function set_text(){
+        target.innerText = document.getElementById('btn_set').value
+    }
+    function beforebegin(){
+        target.insertAdjacentHTML('beforebegin', '<h1>beforebegin</h1>');
+        // as previousSibling
+    }
+    function afterbegin(){
+        //target.insertAdjacentHTML('afterbegin', '<h1>afterbegin</h1>');
+        var newnode = document.createElement('h1');
+        newnode.innerHTML = 'afterbegin';
+        target.insertBefore(newnode, target.firstChild);
+    }
+    function beforeend(){
+        target.insertAdjacentHTML('beforeend', '<h1>beforeend</h1>');
+        // append(target.firstChild)
+    }
+    function afterend(){
+        target.insertAdjacentHTML('afterend', '<h1>afterend</h1>');
+        // nextSibling
+    }
+    </script>
+</body>
+
+</html>
