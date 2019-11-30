@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .target, .target0 {
+            border: 1px solid #000;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<div class="target0">
+    content1
+</div>
+<div class="target0">
+    content2
+</div>
+<hr>
+<div class="target" id="target1">
+    target 1
+</div>
+
+<div class="target" id="target2">
+    target 2
+</div>
+
+<input type="button" value="remove target 1" id="btn1" />
+<input type="button" value="empty target 2" id="btn2" />
+<hr>
+<div class="target" id="target3">
+    target 3
+</div>
+
+<div class="target" id="target4">
+    target 4
+</div>
+
+<input type="button" value="replaceAll target 3" id="btn3" />
+<input type="button" value="replaceWith target 4" id="btn4" />
+<hr>
+<div class="target" id="target5">
+    target5
+</div>
+
+<div class="target" id="target6">
+    target6
+</div>
+
+<div id="source">source</div>
+
+<input type="button" value="clone replaceAll target5" id="btn5" />
+<input type="button" value="clone replaceWith target6" id="btn6" />
+<hr>
+<div class="target" id="target7">
+    target7
+</div>
+
+<div id="source2">source2</div>
+
+<input type="button" value="append source2 to target7" id="btn7" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('#btn7').click(function () {
+        $('#target7').append($('#source2'));
+    })
+</script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('#btn5').click(function () {
+        $('#source').clone().replaceAll('#target5');
+    })
+    $('#btn6').click(function () {
+        $('#target6').replaceWith($('#source').clone());
+    })
+</script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('#btn3').click(function () {
+        $('<div>replaceAll</div>').replaceAll('#target3');
+    })
+    $('#btn4').click(function () {
+        $('#target4').replaceWith('<div>replaceWith</div>');
+    })
+</script>
+<script>
+    $('#btn1').click(function () {
+        $('#target1').remove();
+    })
+    $('#btn2').click(function () {
+        $('#target2').empty();
+    })
+</script>
+<script>
+    $('.target0').before('<div>before</div>');
+    $('.target0').after('<div>after</div>');
+    $('.target0').prepend('<div>prepend</div>');
+    $('.target0').append('<div>append</div>');
+</script>
+
+</html>
