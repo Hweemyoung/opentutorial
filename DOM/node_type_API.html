@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body id="start">
+    <ul>
+        <li><a href="#">html</a></li>
+        <li><a href="#">css</a></li>
+        <li>
+            <a href="#">js</a>
+            <ul>
+                <li><a href="#">js core</a></li>
+                <li><a href="#">dom</a></li>
+                <li><a href="#">bom</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        for (var name in Node) {
+            console.log(name, Node[name]);
+        }
+        console.log('document.nodeType === Node.DOCUMENT_NODE?', document.nodeType === Node.DOCUMENT_NODE)
+        function traverse(target, callback){
+            if(target.nodeType === Node.ELEMENT_NODE){
+                callback(target);
+                var c = target.childNodes;
+                for(var i=0; i<c.length; i++){
+                    traverse(c[i], callback);
+                }
+            }
+        };
+        function callback(elem){
+            console.log(elem);
+        }
+        traverse(document.getElementById('start'), callback);
+    </script>
+</body>
+
+</html>
