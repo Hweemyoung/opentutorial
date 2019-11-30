@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body id="start">
+    <ul>
+        <li><a href="#">html</a></li>
+        <li><a href="#">css</a></li>
+        <li>
+            <a href="#">js</a>
+            <ul>
+                <li><a href="#">js core</a></li>
+                <li><a href="#">dom</a></li>
+                <li><a href="#">bom</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var start = document.getElementById('start');
+        console.log('body.firstChild:', start.firstChild);
+        console.log('body.firstChild.nextSibling:', start.firstChild.nextSibling);
+        console.log('body.firstElementChild:', start.firstElementChild);
+        console.log('body.firstElementChild.previousSibling:', start.firstElementChild.previousSibling);
+        console.log('body.childNodes:', start.childNodes);
+        console.log('body.childNodes.length:', start.childNodes.length);
+    </script>
+</body>
+
+</html>
