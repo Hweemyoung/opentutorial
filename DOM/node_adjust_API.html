@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body>
+    <ul id="target">
+        <li>html</li>
+        <li>css</li>
+    </ul>
+    <input type="button" onclick="callAppendChild()" value="callAppendChild"><br>
+    <input type="button" onclick="callInsertBefore()" value="callInsertBefore"><br>
+    <input type="button" onclick="callRemoveChild()" value="callRemoveChild"><br>
+    <input type="button" onclick="callReplaceChild()" value="callReplaceChild"><br>
+    <script>
+    function callAppendChild(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        li.setAttribute('id', 'tempID');
+        var text = document.createTextNode('js');
+        li.appendChild(text);
+        target.appendChild(li);
+    };
+
+    function callInsertBefore(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        var text = document.createTextNode('jQuery');
+        li.appendChild(text);
+        target.insertBefore(li, target.firstChild);
+    }
+
+    function callRemoveChild(){
+        var target = document.getElementById('target');
+        target.parentNode.removeChild(target);
+    }
+
+    function callReplaceChild(){
+        var target = document.getElementById('target');
+        target.replaceChild(document.getElementById('tempID'), target.firstElementChild);
+    }
+
+    
+    </script>
+</body>
+
+</html>
