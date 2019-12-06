@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body>
+    <!-- Only POST method when uploading files -->
+    <form action="watermarker.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="MAX_FILE_SIZE" value="3000000">
+        <input type="file" name="userfile">
+        <input type="submit" value="SUBMIT">
+    </form>
+    <p>
+        Write your text on the img. Below are some examples:
+    </p>
+    <img src="./watermarker.php" alt="">
+</body>
+
+</html>
