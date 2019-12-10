@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body>
+    <input type="button" value="button" id="button1">
+    <script>
+        var t = document.getElementById('button1');
+        t.onclick = function(event){
+            alert('HW' + event.target.value);
+            console.dir(event);
+        };
+    </script>
+</body>
+
+</html>

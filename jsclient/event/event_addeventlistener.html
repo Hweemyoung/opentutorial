@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style></style>
+    <script></script>
+</head>
+
+<body>
+    <input type="button" value="button1" id="button1">
+    <input type="button" id="button2" value="button2">
+    <input type="button" id="button3" value="button3">
+    <script>
+        var t = document.getElementById('button1');
+        t.addEventListener('click', function(event){
+            alert('HW1, ' + event.target.value);
+        });
+        t.addEventListener('click', function(event){
+            alert('HW2, ' + event.target.value);
+        });
+
+        function btn_listener(event){
+            switch(event.target.id){
+                case 'button1':
+                    alert('case1');
+                    break;
+                case 'button2':
+                    alert('case2');
+                    break;
+                case 'button3':
+                    alert('case3');
+                    break;
+            }
+        }
+        var buttons = document.querySelectorAll('[type="button"]');
+        for(var i=0; i<buttons.length; i++){
+            buttons[i].addEventListener('click', btn_listener);
+        }
+    </script>
+</body>
+
+</html>
